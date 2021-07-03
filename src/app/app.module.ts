@@ -10,6 +10,9 @@ import { Page1Component } from './routes/page1/page1.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
+import { PrivacyComponent } from './routes/privacy/privacy.component';
+import { TermsComponent } from './routes/terms/terms.component';
+import { AboutComponent } from './routes/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { NotfoundComponent } from './routes/notfound/notfound.component';
     Page1Component,
     HeaderComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    PrivacyComponent,
+    TermsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
