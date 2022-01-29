@@ -34,7 +34,7 @@ COPY . /usr/src/app
 #ENV PUBLIC_PATH "/"
 
 #RUN npm run start:build
-RUN ng build
+RUN npm run build
 # Main command
 #CMD [ "npm", "run", "start:server" ]
 #CMD [ "serve", "-s", "build" ]
