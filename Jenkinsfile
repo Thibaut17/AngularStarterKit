@@ -43,7 +43,7 @@ node {
 
 	  //sh "docker push localhost:5000/angular-starter-kit:${env.BUILD_NUMBER}"
 
-	  sh "docker run --name angular-starter-kit --restart unless-stopped -d -p 3000:80 localhost:5000/angular-starter-kit:latest" //angular-starter-kit:${env.BUILD_NUMBER}"
+	  sh "docker run --name angular-starter-kit --restart unless-stopped -d -p 4100:80 localhost:5000/angular-starter-kit:latest" //angular-starter-kit:${env.BUILD_NUMBER}"
 
 	  // docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
       //    dockerImage.push("${env.BUILD_NUMBER}")
