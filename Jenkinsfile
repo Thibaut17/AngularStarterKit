@@ -35,15 +35,15 @@ node {
 
       echo "Docker Image Tag Name: ${dockerImageTag}"
 
-	  //sh "docker stop frontendgl"
+	  //sh "docker stop angular-starter-kit"
 
-	  //sh "docker rm frontendgl"
+	  //sh "docker rm angular-starter-kit"
 
 	  //sh "docker image tag ${dockerImageTag} localhost:5000/angular-starter-kit:${env.BUILD_NUMBER}"
 
 	  //sh "docker push localhost:5000/angular-starter-kit:${env.BUILD_NUMBER}"
 
-	  sh "docker run --name frontendgl --restart unless-stopped -d -p 3000:80 localhost:5000/angular-starter-kit:latest" //frontendgl:${env.BUILD_NUMBER}"
+	  sh "docker run --name angular-starter-kit --restart unless-stopped -d -p 3000:80 localhost:5000/angular-starter-kit:latest" //angular-starter-kit:${env.BUILD_NUMBER}"
 
 	  // docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
       //    dockerImage.push("${env.BUILD_NUMBER}")
@@ -55,7 +55,7 @@ node {
 
     stage('Deploy'){
         sh 'docker build -t react-app .'
-        sh 'docker run --name frontendgl -p 3000:80 --rm react-app'
+        sh 'docker run --name angular-starter-kit -p 3000:80 --rm react-app'
         //sh 'docker tag react-app localhost:5000/react-app'
         //sh 'docker push localhost:5000/react-app'
         //sh 'docker rmi -f react-app localhost:5000/react-app'
