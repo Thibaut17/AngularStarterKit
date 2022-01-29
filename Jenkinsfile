@@ -35,9 +35,9 @@ node {
 
       echo "Docker Image Tag Name: ${dockerImageTag}"
 
-	  //sh "docker stop angular-starter-kit"
+	  sh "docker stop angular-starter-kit"
 
-	  //sh "docker rm angular-starter-kit"
+	  sh "docker rm angular-starter-kit"
 
 	  //sh "docker image tag ${dockerImageTag} localhost:5000/angular-starter-kit:${env.BUILD_NUMBER}"
 
