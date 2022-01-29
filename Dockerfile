@@ -1,6 +1,6 @@
 # Extending image
 #FROM node:carbon
-FROM node:17.0.0 as build
+FROM node:12.22.5 as build
 
 #RUN apt-get update
 #RUN apt-get upgrade -y
